@@ -12,7 +12,7 @@
 	}
 
 	&--blue {
-		color: $ mainBlue;
+		color: $mainBlue;
 	}
 
 	&__icon {
