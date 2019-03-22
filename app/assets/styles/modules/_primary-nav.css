@@ -5,23 +5,23 @@
 	}
 
 	ul {
-		margin: 0;
+		margin:  0;
 		padding: 0;
 
 		@mixin clearFix;
 	}
 
 	li {
-		list-style: none;
-		float: right;
+		list-style:    none;
+		float:         right;
 		padding-right: 20px;
 	}
 
 	a {
-		color: #fff;
+		color:           #FFFFFF;
 		text-decoration: none;
-		font-weight: 300;
-		padding: 12px 0;
-		display: block;
+		font-weight:     300;
+		padding:         12px 0;
+		display:         block;
 	}
 }

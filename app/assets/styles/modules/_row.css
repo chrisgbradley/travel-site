@@ -63,7 +63,7 @@
 		}
 	}
 
-	@mixin atLarge{
+	@mixin atLarge {
 		&__b-margin-until-large {
 			margin-bottom: 0;
 		}
@@ -93,13 +93,14 @@
 	}
 
 	/* BEGIN EQUAL HEIGHT RULES */
+
 	&--equal-height-at-medium {
 		@mixin atMedium {
 			display: flex;
 		}
 
 		& > div {
-			float: none;
+			float:   none;
 			display: flex;
 		}
 	}
@@ -110,7 +111,7 @@
 		}
 
 		& > div {
-			float: none;
+			float:   none;
 			display: flex;
 		}
 	}
