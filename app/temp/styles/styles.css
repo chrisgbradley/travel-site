@@ -1098,7 +1098,13 @@ a {
 	z-index:  2;
 	width:    100%;
 	padding:  10px 0;
+	-webkit-transition: background-color .3s ease-in-out;
+	transition: background-color .3s ease-in-out;
 }
+
+.site-header--is-expanded {
+		background-color: rgba(47,85,114, .55);
+	}
 
 @media (min-width: 800px) {
 
@@ -1132,11 +1138,15 @@ a {
 		text-indent: -9999px;
 	}
 
+@media (min-width: 800px) {
+
 .site-header__btn-container {
-		float: right;
+			float: right
+	}
 	}
 
 .site-header__menu-icon {
+		z-index: 10;
 		width:            20px;
 		height:           20px;
 		background-color: #FFFFFF;
@@ -1153,22 +1163,52 @@ a {
 	}
 
 .site-header__menu-content {
-		display: none;
+		opacity: 0;
+		-webkit-transform: scale(1.2);
+		        transform: scale(1.2);
+		z-index: -9999;
+		position: relative;
+		-webkit-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+		padding-top: 90px;
+		text-align: center;
 	}
 
 @media (min-width: 800px) {
 
 .site-header__menu-content {
-			display: block
+			display: block;
+			padding-top: 0;
+			opacity: 1;
+			-webkit-transform: scale(1);
+			        transform: scale(1);
+			z-index: 3
 	}
 	}
 
 .site-header__menu-content--is-visible {
-			display: block;
+			-webkit-transform: scale(1);
+			        transform: scale(1);
+			z-index: 3;
+			opacity: 1;
 		}
 
+.primary-nav {
+	padding-top: 10px;
+}
+
+@media (min-width: 800px) {
+
+.primary-nav {
+		padding-top: 0
+}
+	}
+
+@media (min-width: 800px) {
+
 .primary-nav--pull-right {
-		float: right;
+			float: right
+	}
 	}
 
 .primary-nav ul {
@@ -1184,14 +1224,45 @@ a {
 
 .primary-nav li {
 		list-style:    none;
-		float:         right;
-		padding-right: 20px;
+		padding-right: 7px;
+		display:       inline-block;
+	}
+
+@media (min-width: 800px) {
+
+.primary-nav li {
+			padding-right: 20px;
+			float:   left;
+			display: block
+	}
+	}
+
+.primary-nav li:last-child {
+		padding-right: 0;
+	}
+
+@media (min-width: 800px) {
+
+.primary-nav li:last-child {
+			padding-right: 20px
+	}
 	}
 
 .primary-nav a {
 		color:           #FFFFFF;
 		text-decoration: none;
 		font-weight:     300;
-		padding:         12px 0;
+		padding: 5px 8px;
+		font-size: .8rem;
+		background-color: rgba(47,85,114, .5);
 		display:         block;
+	}
+
+@media (min-width: 800px) {
+
+.primary-nav a {
+			font-size: 1rem;
+			padding:         12px 0;
+			background-color: transparent
+	}
 	}
